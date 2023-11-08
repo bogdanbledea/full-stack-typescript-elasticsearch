@@ -1,8 +1,11 @@
-version: 3
+version: "3.8"
+# services
 services:
   frontend:
     build: frontend
+    ports:
+      - "80:80"
   backend:
     build: backend
-  logstash:
-  elasticsearch:
+    ports:
+      - "8000:8000"
